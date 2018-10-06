@@ -1,0 +1,29 @@
+<head>
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body onload="myFunction()">
+<h1>Finals</h1>
+<script src="BMSPushSDK.js" async></script>
+<script>
+function myFunction()
+{
+    var bmsPush = new BMSPush()
+    function callback(response) {
+        alert(response.response)
+    }
+    var initParams = {
+        "appGUID":"10ff07a9-4476-4173-93cc-cdd7e15caf0f",
+        "appRegion":".eu-gb.bluemix.net",
+        "clientSecret":"f778625c-a1d1-469e-bb94-f258c03da190"
+    }
+    bmsPush.initialize(initParams, callback)
+    bmsPush.register(function(response) 
+    {
+        alert(response.response)
+    })
+}
+
+</script>
+</body>

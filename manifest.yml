@@ -1,0 +1,9 @@
+applications:
+- memory: 256M
+  instances: 1
+  # domain: https://ibmcloudpushnotifications.mybluemix.net
+  name: pushservice
+  host: pushservice
+  disk_quota: 1024M
+  services:
+  - Notifications
